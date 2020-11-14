@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTO\CreatorEmployeeDto.cs" />
+    <Compile Include="DTO\CreatorMontlyEmployeeDto.cs" />
+    <Compile Include="DTO\CreatorHourlyEmployeeDto.cs" />
     <Compile Include="DTO\EmployeeDto.cs" />
     <Compile Include="DTO\MonthlyEmployeeDto.cs" />
     <Compile Include="DTO\HourlyEmployeeDto.cs" />

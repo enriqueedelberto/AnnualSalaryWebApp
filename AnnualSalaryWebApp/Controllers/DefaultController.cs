@@ -1,8 +1,11 @@
-﻿using System;
+﻿using AnnualSalary.Data;
+using AnnualSalary.Models.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Http;
 
 namespace AnnualSalaryWebApp.Controllers
@@ -10,9 +13,10 @@ namespace AnnualSalaryWebApp.Controllers
     public class DefaultController : ApiController
     {
         // GET: api/Default
-        public IEnumerable<string> Get()
+        public Task<List<Employee>> Get()
         {
-            return new string[] { "value1", "value2" };
+            var dataConnection = new HandlerDataConnection(); 
+            return dataConnection.GetAllEmployees();
         }
 
         // GET: api/Default/5
