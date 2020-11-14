@@ -6,6 +6,10 @@ using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using AnnualSalaryWebApp;
 using AnnualSalaryWebApp.Controllers;
+using System.Net.Http;
+using System.Web.Http.Hosting;
+using System.Web.Http;
+using System.Net;
 
 namespace AnnualSalaryWebApp.Tests.Controllers
 {
@@ -49,6 +53,23 @@ namespace AnnualSalaryWebApp.Tests.Controllers
 
             // Assert
             Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
+        public void EmployeeList()
+        {
+            // Arrange
+            //var controller = new EmployeeController();
+
+            //controller.Request = new HttpRequestMessage();
+            //controller.Request.Properties.Add(HttpPropertyKeys.HttpConfigurationKey, new HttpConfiguration());
+            //// Act
+            ////    ViewResult result = controller.Contact() as ViewResult;
+
+            //var response = controller.Get();
+
+            //// Assert
+            //Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
         }
     }
 }
