@@ -10,19 +10,29 @@ using System.Web.Http;
 
 namespace AnnualSalaryWebApp.Controllers
 {
+    [RoutePrefix("api/Employee")]
     public class EmployeeController : ApiController
     {
+
         // GET: api/Employee
-        public Task<List<EmployeeDto>> Get()
+        [HttpGet]
+        [Route("GetEmployees")]
+        public async Task<List<EmployeeDto>> GetAll()
         {
             var dataConnection = new HandlerDataRetrieve();
-            return dataConnection.getAllEmployeesDto();
+            List<EmployeeDto> employeesDto = await dataConnection.getAllEmployeesDto();
+            return employeesDto;
         }
 
         // GET: api/Employee/5
-        public string Get(int id)
+        [HttpGet]
+        [Route("GetEmployee")]
+        public async Task<EmployeeDto> GetEmployee([FromUri] string id)
         {
-            return "value";
+            var dataConnection = new HandlerDataRetrieve();
+            List<EmployeeDto> employeesDto = await dataConnection.getAllEmployeesDto();
+
+            return employeesDto.FirstOrDefault(emp=> emp.id.Equals(id));
         }
 
         // POST: api/Employee

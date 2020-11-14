@@ -14,11 +14,13 @@ namespace AnnualSalaryWebApp.Controllers
     public class DefaultController : ApiController
     {
         // GET: api/Default
-        public Task<List<EmployeeDto>> Get()
+        public async Task<HttpResponseMessage> Get()
         {
             var dataConnection = new HandlerDataRetrieve(); 
-            return dataConnection.getAllEmployeesDto();
+            var response = await dataConnection.getAllEmployeesDto();
+            return Request.CreateResponse(HttpStatusCode.OK, response);
         }
+
 
         // GET: api/Default/5
         public string Get(int id)

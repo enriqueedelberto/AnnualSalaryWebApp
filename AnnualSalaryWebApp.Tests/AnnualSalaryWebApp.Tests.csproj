@@ -51,6 +51,7 @@
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Http, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
@@ -89,6 +90,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\EmployeeTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\HomeControllerTest.cs" />
   </ItemGroup>
@@ -99,8 +101,16 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AnnualSalary.Data\AnnualSalary.Data.csproj">
+      <Project>{9e62376a-9b43-4f03-a12b-faaa87ef5aa5}</Project>
+      <Name>AnnualSalary.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AnnualSalary.Models\AnnualSalary.Models.csproj">
+      <Project>{bab9fdd0-8ff0-47bf-ade7-7a26c90a6421}</Project>
+      <Name>AnnualSalary.Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AnnualSalaryWebApp\AnnualSalaryWebApp.csproj">
-      <Project>{35E125FD-19A1-42D3-89A6-64CF39DB79EF}</Project>
+      <Project>{35e125fd-19a1-42d3-89a6-64cf39db79ef}</Project>
       <Name>AnnualSalaryWebApp</Name>
     </ProjectReference>
   </ItemGroup>
