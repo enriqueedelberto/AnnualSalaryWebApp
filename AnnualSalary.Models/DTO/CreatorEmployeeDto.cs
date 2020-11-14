@@ -9,6 +9,6 @@ namespace AnnualSalary.Models.DTO
 {
     public abstract class CreatorEmployeeDto
     {
-        public abstract EmployeeDto create(Employee employee);
+        public abstract EmployeeDto createEmployee(Employee employee);
     }
 }

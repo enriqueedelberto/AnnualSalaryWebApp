@@ -11,15 +11,15 @@ namespace AnnualSalary.Models.DTO
     {
          
 
-        protected string id { get; set; }
-        protected string name { get; set; }
-        protected string contractTypeName { get; set; }
-        protected string roleId { get; set; }
-        protected string roleName { get; set; }
-        protected string roleDescription { get; set; }
-        protected decimal hourlySalary { get; set; }
-        protected decimal monthlySalary { get; set; }
-        public abstract decimal annualSalary { get;  }
+        public string id { get; set; }
+        public string name { get; set; }
+        public string contractTypeName { get; set; }
+        public string roleId { get; set; }
+        public string roleName { get; set; }
+        public string roleDescription { get; set; }
+        public decimal hourlySalary { get; set; }
+        public decimal monthlySalary { get; set; }
+        public abstract decimal annualSalary { get; set; }
 
         public abstract decimal calculateSalary();
     }

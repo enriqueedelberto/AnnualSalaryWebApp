@@ -1,4 +1,5 @@
 ﻿using AnnualSalary.Data;
+using AnnualSalary.Models.DTO;
 using AnnualSalary.Models.Entities;
 using System;
 using System.Collections.Generic;
@@ -13,10 +14,10 @@ namespace AnnualSalaryWebApp.Controllers
     public class DefaultController : ApiController
     {
         // GET: api/Default
-        public Task<List<Employee>> Get()
+        public Task<List<EmployeeDto>> Get()
         {
             var dataConnection = new HandlerDataConnection(); 
-            return dataConnection.GetAllEmployees();
+            return dataConnection.getAllEmployeesDto();
         }
 
         // GET: api/Default/5

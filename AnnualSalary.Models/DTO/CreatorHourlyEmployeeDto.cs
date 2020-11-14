@@ -10,7 +10,9 @@ namespace AnnualSalary.Models.DTO
     public class CreatorHourlyEmployeeDto : CreatorEmployeeDto
     {
          
-        public override EmployeeDto create(Employee employee)
+        
+
+        public override EmployeeDto createEmployee(Employee employee)
         {
             return new HourlyEmployeeDto(employee);
         }

@@ -26,7 +26,7 @@ namespace AnnualSalary.Models.DTO
         public override decimal annualSalary {
 
             get => 120 * this.hourlySalary * 12;
-
+            set => this.annualSalary = value;
         }
 
         public override decimal calculateSalary()
