@@ -12,8 +12,7 @@ namespace AnnualSalary.Data
         private const string HOURLY_SALARY_EMPLOYEE = "HourlySalaryEmployee";
         private const string MONTHLY_SALARY_EMPLOYEE = "MonthlySalaryEmployee";
         private List<EmployeeDto> employeesDto;
-        private CreatorEmployeeDto[] factoryEmployee;
-        private HandlerDataConnection dataConnection;
+        private CreatorEmployeeDto[] factoryEmployee; 
 
         public HandlerDataRetrieve()
         {
@@ -21,13 +20,13 @@ namespace AnnualSalary.Data
             this.factoryEmployee = new CreatorEmployeeDto[2];
             this.factoryEmployee[0] = new CreatorHourlyEmployeeDto();
             this.factoryEmployee[1] = new CreatorMonthlyEmployeeDto();
-            this.dataConnection = new HandlerDataConnection();
+            
         }
 
 
         public async Task<List<EmployeeDto>> getAllEmployeesDto()
         {
-            var employees = await this.dataConnection.GetAllEmployees();
+            var employees = await HandlerDataConnection.getInstance().GetAllEmployees();
 
             this.employeesDto = employees.Select(emp => {
 

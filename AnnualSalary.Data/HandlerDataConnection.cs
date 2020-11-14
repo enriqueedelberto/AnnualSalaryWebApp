@@ -19,9 +19,11 @@ namespace AnnualSalary.Data
         private string _apiUrl;
         private HttpClient client = new HttpClient();
         private const string ENDPOINT_PATH = "Employees";
-        
 
-        public HandlerDataConnection()
+        public static HandlerDataConnection _instance;
+
+
+        private HandlerDataConnection()
         {
           
             this._apiUrl = ConfigurationManager.AppSettings["Url_API_Repository"].ToString();
@@ -30,6 +32,16 @@ namespace AnnualSalary.Data
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
            
+        }
+
+        public static HandlerDataConnection getInstance()
+        {
+            if(_instance == null)
+            {
+                _instance = new HandlerDataConnection();
+            }
+
+            return _instance;
         }
 
         public async Task<List<Employee>> GetAllEmployees()
