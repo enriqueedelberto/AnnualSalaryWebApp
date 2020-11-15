@@ -28,10 +28,14 @@ namespace AnnualSalaryWebApp
                       "~/Content/angular-material.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
-                     "~/Scripts/angular*"));
+                     "~/Scripts/angular.js",
+                     "~/Scripts/angular-route.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/angularcomplements").Include(
-                       "~/Scripts/angular-*"));
+                       "~/Scripts/angular-animate.js",
+                       "~/Scripts/angular-aria.js",
+                        "~/Scripts/angular-messages.js",
+                         "~/Scripts/angular-material.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/angularApp").Include(
                        "~/Assets/FrontEnd/*.js"));

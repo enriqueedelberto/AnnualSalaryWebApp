@@ -5,6 +5,7 @@ angular.module('myApp', [
     'ngRoute',
     'ngMaterial',
     'ngMessages',
+    'ngAnimate',
     'myApp.home', 
 ])
     .config(['$locationProvider', '$routeProvider', '$mdThemingProvider', function ($locationProvider, $routeProvider, $mdThemingProvider) {

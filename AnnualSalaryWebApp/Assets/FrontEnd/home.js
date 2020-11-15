@@ -1,7 +1,11 @@
 ﻿'use strict';
 
 angular.module('myApp.home', ['ngRoute'])
-
+    .config(['$routeProvider', function ($routeProvider) {
+        $routeProvider.when('/home', { 
+            controller: 'HomeCtrl'
+        });
+    }])
       
     .controller('HomeCtrl', ['$scope', '$http', function ($scope, $http) {
 
@@ -20,7 +24,7 @@ angular.module('myApp.home', ['ngRoute'])
             }).then(function (response) {
                 $scope.lstEmployees = response.data;
             }, function () {
-                alert("Error Occur");
+                console.log("Error Occur");
             }) 
         }
     }]);
