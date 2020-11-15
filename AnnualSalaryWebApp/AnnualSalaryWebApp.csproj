@@ -145,6 +145,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\FrontEnd\app.js" />
+    <Content Include="Assets\FrontEnd\home.js" />
+    <Content Include="Assets\FrontEnd\services.js" />
     <Content Include="Content\angular-material.css" />
     <Content Include="Content\angular-material.layout-attributes.css" />
     <Content Include="Content\angular-material.layout-attributes.min.css" />
@@ -167,6 +170,7 @@
     <Content Include="Scripts\angular-material-mocks.js" />
     <Content Include="Scripts\angular-material.js" />
     <Content Include="Scripts\angular-material.min.js" />
+    <Content Include="Scripts\angular-messages.js" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-route.min.js" />

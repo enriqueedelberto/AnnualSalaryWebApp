@@ -17,7 +17,7 @@ namespace AnnualSalaryWebApp.Tests.Controllers
             var controller = new EmployeeController();
             controller.Request = new HttpRequestMessage();
             controller.Request.Properties.Add(HttpPropertyKeys.HttpConfigurationKey, new HttpConfiguration());
-            var response = controller.GetAll();
+            var response = controller.Get();
             
             Assert.AreEqual(HttpStatusCode.OK, response.Status);
         }
