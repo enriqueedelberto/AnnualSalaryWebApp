@@ -24,7 +24,17 @@ namespace AnnualSalaryWebApp
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/angular-material.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/angular").Include(
+                     "~/Scripts/angular*"));
+
+            bundles.Add(new ScriptBundle("~/bundles/angularcomplements").Include(
+                       "~/Scripts/angular-*"));
+
+            bundles.Add(new ScriptBundle("~/bundles/angularApp").Include(
+                       "~/Assets/FrontEnd/*.js"));
         }
     }
 }

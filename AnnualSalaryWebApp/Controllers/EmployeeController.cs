@@ -15,9 +15,8 @@ namespace AnnualSalaryWebApp.Controllers
     {
 
         // GET: api/Employee
-        [HttpGet]
-        [Route("GetEmployees")]
-        public async Task<List<EmployeeDto>> GetAll()
+         
+        public async Task<List<EmployeeDto>> Get()
         {
             var dataConnection = new HandlerDataRetrieve();
             List<EmployeeDto> employeesDto = await dataConnection.getAllEmployeesDto();
@@ -25,14 +24,13 @@ namespace AnnualSalaryWebApp.Controllers
         }
 
         // GET: api/Employee/5
-        [HttpGet]
-        [Route("GetEmployee")]
-        public async Task<EmployeeDto> GetEmployee([FromUri] string id)
+         
+        public async Task<List<EmployeeDto>> Get(string id)
         {
             var dataConnection = new HandlerDataRetrieve();
             List<EmployeeDto> employeesDto = await dataConnection.getAllEmployeesDto();
 
-            return employeesDto.FirstOrDefault(emp=> emp.id.Equals(id));
+            return employeesDto.FindAll(emp=> emp.id.Equals(id));
         }
 
         // POST: api/Employee
