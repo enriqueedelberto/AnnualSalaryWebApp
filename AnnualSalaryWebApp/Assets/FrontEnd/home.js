@@ -20,7 +20,7 @@ angular.module('myApp.home', ['ngRoute'])
             }).then(function (response) {
                 $scope.lstEmployees = response.data;
             }, function () {
-                alert("Error Occur");
+                console.log("Error Occur");
             }) 
         }
     }]);
