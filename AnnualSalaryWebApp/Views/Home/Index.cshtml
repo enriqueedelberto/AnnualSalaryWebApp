@@ -3,7 +3,7 @@
 }
  
 
-<div class="container" ng-controller="HomeCtrl">
+<div class="container" ng-controller="HomeCtrl as vm">
     <div class="panel panel-default">
 
         <div class="panel-heading">
@@ -11,10 +11,12 @@
         </div>
 
         <div class="panel-body">
+            <md-progress-linear ng-if="showLoadingBar"  md-mode="indeterminate" ></md-progress-linear>
+
 
             @* Alerts messages *@
             <div class="alert alert-danger" role="alert" ng-if="errorMessages.length > 0">
-                 <span>{{errorMessages[0]}}</span>
+                <span>{{errorMessages[0]}}</span>
 
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close" ng-click="closeAlert()">
                     <span aria-hidden="true">&times;</span>
@@ -22,7 +24,7 @@
             </div>
 
             <md-card>
-                <form name="myForm"> 
+                <form name="myForm">
 
                     <md-card-content layout="row" layout-align="start center">
                         <md-input-container>
