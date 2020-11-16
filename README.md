@@ -6,6 +6,8 @@ This app was built with Visual Studio Community 2017 using *ASP .Net Framework M
     * Compile the solution
 	* Run the application  typing F5 key or go to Debug menu and click on the option __Start debugging__
 
+* The FrontEnd is a simple page with Angular Js, Angular Material and Bootstrap
+    * It is a simple form that shows a grid with the results.
 
 ## Testing
   You can test the Web API Employee using the Unit test project: 
