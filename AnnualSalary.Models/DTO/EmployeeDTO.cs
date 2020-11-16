@@ -21,6 +21,6 @@ namespace AnnualSalary.Models.DTO
         public decimal monthlySalary { get; set; }
         public abstract decimal annualSalary { get; set; }
 
-        public abstract decimal calculateSalary();
+        
     }
 }

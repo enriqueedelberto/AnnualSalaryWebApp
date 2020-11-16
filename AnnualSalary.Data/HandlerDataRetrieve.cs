@@ -12,14 +12,14 @@ namespace AnnualSalary.Data
         private const string HOURLY_SALARY_EMPLOYEE = "HourlySalaryEmployee";
         private const string MONTHLY_SALARY_EMPLOYEE = "MonthlySalaryEmployee";
         private List<EmployeeDto> employeesDto;
-        private CreatorEmployeeDto[] factoryEmployee; 
+        private CreatorEmployeeDto factoryHourlyEmployee;
+        private CreatorEmployeeDto factoryMonthlyEmployee;
 
         public HandlerDataRetrieve()
         {
-            this.employeesDto = new List<EmployeeDto>();
-            this.factoryEmployee = new CreatorEmployeeDto[2];
-            this.factoryEmployee[0] = new CreatorHourlyEmployeeDto();
-            this.factoryEmployee[1] = new CreatorMonthlyEmployeeDto();
+            this.employeesDto = new List<EmployeeDto>(); 
+            this.factoryHourlyEmployee = new CreatorHourlyEmployeeDto();
+            this.factoryMonthlyEmployee = new CreatorMonthlyEmployeeDto();
             
         }
 
@@ -34,11 +34,11 @@ namespace AnnualSalary.Data
                 switch (emp.contractTypeName)
                 {
                     case HOURLY_SALARY_EMPLOYEE:
-                        employeeDto = this.factoryEmployee[0].createEmployee(emp);
+                        employeeDto = this.factoryHourlyEmployee.createEmployee(emp);
                         break;
 
                     case MONTHLY_SALARY_EMPLOYEE:
-                        employeeDto = this.factoryEmployee[1].createEmployee(emp);
+                        employeeDto = this.factoryMonthlyEmployee.createEmployee(emp);
                         break;
                 }
                 return employeeDto;

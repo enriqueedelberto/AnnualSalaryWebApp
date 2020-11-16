@@ -18,9 +18,20 @@ namespace AnnualSalaryWebApp.Controllers
          
         public async Task<List<EmployeeDto>> Get()
         {
-            var dataConnection = new HandlerDataRetrieve();
-            List<EmployeeDto> employeesDto = await dataConnection.getAllEmployeesDto();
-            return employeesDto;
+            List<EmployeeDto> employeesDto = new List<EmployeeDto>();
+            try
+            {
+                var dataConnection = new HandlerDataRetrieve();
+                  employeesDto = await dataConnection.getAllEmployeesDto();
+                return employeesDto;
+
+            }
+            catch(Exception)
+            {
+                return employeesDto;
+
+            }
+            
         }
 
         // GET: api/Employee/5
