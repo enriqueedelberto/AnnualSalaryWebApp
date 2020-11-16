@@ -7,38 +7,52 @@
     <div class="panel panel-default">
 
         <div class="panel-heading">
-            @*<h2>Employees</h2>*@
+            <h2>Employees</h2>
         </div>
 
         <div class="panel-body">
+
+            @* Alerts messages *@
+            <div class="alert alert-danger" role="alert" ng-if="errorMessages.length > 0">
+                 <span>{{errorMessages[0]}}</span>
+
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close" ng-click="closeAlert()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
             <md-card>
+                <form name="myForm"> 
 
-                <md-card-content layout="row" layout-align="start center">
-                    <md-input-container>
-                        <label>Id</label>
-                        <input ng-model="employee.id">
-                    </md-input-container>
+                    <md-card-content layout="row" layout-align="start center">
+                        <md-input-container>
+                            <label>Id</label>
+                            <input ng-model="employee.id" pattern="^[0-9]*$">
+                        </md-input-container>
 
-                </md-card-content>
-
-               
-
-                <md-card-actions layout="row" layout-align="end center">
+                    </md-card-content>
 
 
-                    <md-button class="md-primary md-raised" aria-label="Favorite" ng-click="getEmployees()">
-                        Search
-                    </md-button>
 
-                    <md-button class="md-secondary md-raised" aria-label="Favorite" ng-click="clear()">
-                        Clear
-                    </md-button>
+                    <md-card-actions layout="row" layout-align="end center">
 
 
-                </md-card-actions>
+                        <md-button class="md-primary md-raised" aria-label="Favorite" ng-click="getEmployees()">
+                            Search
+                        </md-button>
+
+                        <md-button class="md-secondary md-raised" aria-label="Favorite" ng-click="clear()">
+                            Clear
+                        </md-button>
+
+
+                    </md-card-actions>
+
+                </form>
             </md-card>
         </div>
 
+        @* Result grid *@
         <div class="panel-body">
             <table class="table table-bordered">
                 <thead class="thead-dark">

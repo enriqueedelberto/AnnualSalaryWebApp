@@ -15,16 +15,25 @@ angular.module('myApp.home', ['ngRoute'])
             id: ''
         };
 
+        $scope.errorMessages = [];
 
 
-        $scope.getEmployees = function() {
+
+        $scope.getEmployees = function () {
+          
+            if ($scope.myForm.$invalid) {
+                $scope.errorMessages.push("Fields should be verified");
+                return;
+            }
+
+            //Call Http API
             $http({
                 method: "get",
                 url: `${urlAPI}${$scope.employee.id}`
             }).then(function (response) {
                 $scope.lstEmployees = response.data;
-            }, function () {
-                console.log("Error Occur");
+            }, function () { 
+                    $scope.errorMessages.push("Error Occur");
             }) 
         }
 
@@ -35,5 +44,11 @@ angular.module('myApp.home', ['ngRoute'])
             };
 
             $scope.lstEmployees = [];
+
+              $scope.errorMessages = [];
+        }
+
+        $scope.closeAlert = function () {
+            $scope.errorMessages = [];
         }
     }]);
