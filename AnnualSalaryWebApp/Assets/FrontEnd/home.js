@@ -26,7 +26,7 @@ angular.module('myApp.home', ['ngRoute'])
                 return;
             }
 
-
+            //Call Http API
             $http({
                 method: "get",
                 url: `${urlAPI}${$scope.employee.id}`

@@ -12,6 +12,7 @@
 
         <div class="panel-body">
 
+            @* Alerts messages *@
             <div class="alert alert-danger" role="alert" ng-if="errorMessages.length > 0">
                  <span>{{errorMessages[0]}}</span>
 
@@ -21,9 +22,7 @@
             </div>
 
             <md-card>
-                <form name="myForm">
-
-
+                <form name="myForm"> 
 
                     <md-card-content layout="row" layout-align="start center">
                         <md-input-container>
@@ -53,6 +52,7 @@
             </md-card>
         </div>
 
+        @* Result grid *@
         <div class="panel-body">
             <table class="table table-bordered">
                 <thead class="thead-dark">
