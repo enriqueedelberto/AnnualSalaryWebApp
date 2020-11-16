@@ -47,7 +47,6 @@
     <Compile Include="DTO\EmployeeDto.cs" />
     <Compile Include="DTO\MonthlyEmployeeDto.cs" />
     <Compile Include="DTO\HourlyEmployeeDto.cs" />
-    <Compile Include="Entities\Class1.cs" />
     <Compile Include="Entities\Employee.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

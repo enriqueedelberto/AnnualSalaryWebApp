@@ -55,21 +55,6 @@ namespace AnnualSalaryWebApp.Tests.Controllers
             Assert.IsNotNull(result);
         }
 
-        [TestMethod]
-        public void EmployeeList()
-        {
-            // Arrange
-            //var controller = new EmployeeController();
-
-            //controller.Request = new HttpRequestMessage();
-            //controller.Request.Properties.Add(HttpPropertyKeys.HttpConfigurationKey, new HttpConfiguration());
-            //// Act
-            ////    ViewResult result = controller.Contact() as ViewResult;
-
-            //var response = controller.Get();
-
-            //// Assert
-            //Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
-        }
+        
     }
 }
