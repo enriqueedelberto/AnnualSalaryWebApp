@@ -7,26 +7,36 @@
     <div class="panel panel-default">
 
         <div class="panel-heading">
-            <h2>Employees</h2>
+            @*<h2>Employees</h2>*@
         </div>
 
         <div class="panel-body">
+            <md-card>
 
-           
-                <md-input-container>
-                    <label>Id</label>
-                    <input ng-model="employee.id">
-                </md-input-container>
+                <md-card-content layout="row" layout-align="start center">
+                    <md-input-container>
+                        <label>Id</label>
+                        <input ng-model="employee.id">
+                    </md-input-container>
 
-           
+                </md-card-content>
 
-            <div class="row">
-                <md-button class="md-primary md-raised right" aria-label="Favorite" ng-click="getEmployees()">
-                    Get employees 
-                </md-button>
+               
 
-            </div>
+                <md-card-actions layout="row" layout-align="end center">
 
+
+                    <md-button class="md-primary md-raised" aria-label="Favorite" ng-click="getEmployees()">
+                        Search
+                    </md-button>
+
+                    <md-button class="md-secondary md-raised" aria-label="Favorite" ng-click="clear()">
+                        Clear
+                    </md-button>
+
+
+                </md-card-actions>
+            </md-card>
         </div>
 
         <div class="panel-body">

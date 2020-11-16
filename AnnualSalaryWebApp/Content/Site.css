@@ -26,3 +26,9 @@ textarea {
 .right {
     float: right;
 }
+
+
+.navbar-inverse {
+    background-color: rgb(57,73,171) !important;
+}
+ 
