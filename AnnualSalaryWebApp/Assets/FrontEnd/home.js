@@ -15,12 +15,7 @@ angular.module('myApp.home', ['ngRoute'])
             id: ''
         };
 
-        var self = this;
-        self.determinateValue = 30;
-        self.determinateValue2 = 30;
-
-        self.showList = [];
-
+      
 
         $scope.errorMessages = [];
 
