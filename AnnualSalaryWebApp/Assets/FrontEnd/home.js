@@ -27,4 +27,13 @@ angular.module('myApp.home', ['ngRoute'])
                 console.log("Error Occur");
             }) 
         }
+
+
+        $scope.clear = function () {
+            $scope.employee = {
+                id: ''
+            };
+
+            $scope.lstEmployees = [];
+        }
     }]);

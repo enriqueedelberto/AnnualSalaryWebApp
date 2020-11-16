@@ -146,7 +146,6 @@
   <ItemGroup>
     <Content Include="Assets\FrontEnd\app.js" />
     <Content Include="Assets\FrontEnd\home.js" />
-    <Content Include="Assets\FrontEnd\services.js" />
     <Content Include="Content\angular-material.css" />
     <Content Include="Content\angular-material.layout-attributes.css" />
     <Content Include="Content\angular-material.layout-attributes.min.css" />
